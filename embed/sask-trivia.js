@@ -3,6 +3,7 @@
 
   const CONFIG = {
     API_BASE_URL: 'https://sask-trivia.nmorrison.workers.dev',
+    CSS_URL: 'https://sask-trivia.nmorrison.workers.dev/sask-trivia.css',
     ROOT_SELECTOR: '#sask-trivia-root',
     MOUNT_SELECTOR: '.widget-area.widget-area-full',
     PAGE_PATH: '/sask-trivia',
@@ -74,6 +75,8 @@
       return;
     }
 
+    ensureStylesheet();
+
     state.root = document.querySelector(CONFIG.ROOT_SELECTOR);
 
     if (!state.root) {
@@ -87,6 +90,17 @@
 
     renderShell('<div class="sask-trivia__loading">Loading today\'s question...</div>');
     loadQuestion();
+  }
+
+  function ensureStylesheet() {
+    if (!CONFIG.CSS_URL || document.querySelector(`link[href="${CONFIG.CSS_URL}"]`)) {
+      return;
+    }
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = CONFIG.CSS_URL;
+    document.head.appendChild(link);
   }
 
   async function loadQuestion() {
@@ -126,7 +140,6 @@
         <div class="sask-trivia__options">${options}</div>
         <div class="sask-trivia__result ${result ? 'is-visible' : ''} ${resultClass}" id="saskTriviaResult">${resultText}</div>
       </section>
-      ${renderStats()}
     `);
 
     if (!result) {
@@ -170,29 +183,6 @@
         <h2 class="sask-trivia__title">How Well Do You Know Saskatchewan?</h2>
         <p class="sask-trivia__intro">Answer one Saskatchewan trivia question each day and build your local knowledge streak.</p>
         ${content}
-      </div>
-    `;
-  }
-
-  function renderStats() {
-    const stats = Storage.getStats();
-    const accuracy = stats.totalPlayed > 0 ? Math.round((stats.totalCorrect / stats.totalPlayed) * 100) : 0;
-
-    return `
-      <div class="sask-trivia__stats" aria-label="Your trivia statistics">
-        ${renderStat(stats.currentStreak, 'Current Streak')}
-        ${renderStat(stats.bestStreak, 'Best Streak')}
-        ${renderStat(`${accuracy}%`, 'Accuracy')}
-        ${renderStat(`${stats.totalCorrect}/${stats.totalPlayed}`, 'Correct')}
-      </div>
-    `;
-  }
-
-  function renderStat(value, label) {
-    return `
-      <div class="sask-trivia__stat">
-        <div class="sask-trivia__stat-value">${value}</div>
-        <div class="sask-trivia__stat-label">${label}</div>
       </div>
     `;
   }
