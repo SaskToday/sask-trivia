@@ -41,7 +41,9 @@ function getCorsHeaders(request, env) {
     .map((origin) => origin.trim())
     .filter(Boolean);
   const requestOrigin = request.headers.get('Origin');
-  const allowOrigin = allowedOrigins.includes(requestOrigin) ? requestOrigin : allowedOrigins[0] || '*';
+  const allowOrigin = allowedOrigins.includes('*')
+    ? '*'
+    : allowedOrigins.includes(requestOrigin) ? requestOrigin : allowedOrigins[0] || '*';
 
   return {
     'Access-Control-Allow-Origin': allowOrigin,
@@ -49,7 +51,7 @@ function getCorsHeaders(request, env) {
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400',
     'Cache-Control': 'no-store',
-    'Vary': 'Origin'
+    ...(allowOrigin === '*' ? {} : { 'Vary': 'Origin' })
   };
 }
 
