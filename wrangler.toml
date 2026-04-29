@@ -2,6 +2,10 @@ name = "sask-trivia"
 main = "src/index.js"
 compatibility_date = "2026-04-29"
 
+[assets]
+directory = "./embed"
+binding = "ASSETS"
+
 [vars]
 # The first daily question will be served on this date.
 TRIVIA_START_DATE = "2026-04-29"

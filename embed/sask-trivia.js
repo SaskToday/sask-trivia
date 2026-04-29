@@ -2,8 +2,10 @@
   'use strict';
 
   const CONFIG = {
-    API_BASE_URL: 'https://sask-trivia.YOUR_SUBDOMAIN.workers.dev',
+    API_BASE_URL: 'https://sask-trivia.nmorrison.workers.dev',
     ROOT_SELECTOR: '#sask-trivia-root',
+    MOUNT_SELECTOR: '.widget-area.widget-area-full',
+    PAGE_PATH: '/sask-trivia',
     STORAGE_PREFIX: 'sasktoday_trivia'
   };
 
@@ -68,12 +70,18 @@
   };
 
   function init() {
+    if (CONFIG.PAGE_PATH && window.location.pathname !== CONFIG.PAGE_PATH) {
+      return;
+    }
+
     state.root = document.querySelector(CONFIG.ROOT_SELECTOR);
 
     if (!state.root) {
       state.root = document.createElement('div');
       state.root.id = 'sask-trivia-root';
-      const pageTarget = document.querySelector('main article, article, main') || document.body;
+      const pageTarget = document.querySelector(CONFIG.MOUNT_SELECTOR)
+        || document.querySelector('main article, article, main')
+        || document.body;
       pageTarget.appendChild(state.root);
     }
 

@@ -50,21 +50,16 @@ https://sask-trivia.YOUR_SUBDOMAIN.workers.dev
 
 ## Villager Setup
 
-On the `sasktoday.ca/sask-trivia` page, add this HTML where the game should appear:
+The Worker serves the CSS and JavaScript files from the `embed` folder, so Villager only needs short head tags.
+
+Paste this into the page head scripts area, replacing the domain with your real Worker URL:
 
 ```html
-<div id="sask-trivia-root"></div>
+<link rel="stylesheet" href="https://sask-trivia.YOUR_SUBDOMAIN.workers.dev/sask-trivia.css">
+<script src="https://sask-trivia.YOUR_SUBDOMAIN.workers.dev/sask-trivia.js" defer></script>
 ```
 
-Paste the contents of `embed/sask-trivia.css` into the page CSS area.
-
-In `embed/sask-trivia.js`, replace this placeholder:
-
-```js
-API_BASE_URL: 'https://sask-trivia.YOUR_SUBDOMAIN.workers.dev',
-```
-
-with the real Cloudflare Worker URL. Then paste the full JavaScript into the page head script area inside a `<script>` tag.
+You do not need to add body HTML. The script creates its own game container inside `.widget-area.widget-area-full` on `/sask-trivia`.
 
 ## How The Daily Question Works
 

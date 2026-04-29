@@ -13,6 +13,10 @@ export default {
     }
 
     try {
+      if (env.ASSETS && (url.pathname === '/sask-trivia.css' || url.pathname === '/sask-trivia.js')) {
+        return env.ASSETS.fetch(request);
+      }
+
       if (url.pathname === '/api/health' && request.method === 'GET') {
         return json({ ok: true, questionCount: questions.length }, corsHeaders);
       }
