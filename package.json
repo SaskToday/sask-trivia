@@ -1,0 +1,14 @@
+{
+  "name": "sask-trivia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node scripts/validate-data.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}

@@ -1,0 +1,8 @@
+name = "sask-trivia"
+main = "src/index.js"
+compatibility_date = "2026-04-29"
+
+[vars]
+# The first daily question will be served on this date.
+TRIVIA_START_DATE = "2026-04-29"
+ALLOWED_ORIGINS = "https://www.sasktoday.ca,https://sasktoday.ca,http://localhost:8787,http://127.0.0.1:8787"

@@ -1,0 +1,194 @@
+.sask-trivia {
+  --sask-trivia-bg: #071b14;
+  --sask-trivia-card: #0f2b21;
+  --sask-trivia-card-soft: rgba(255, 255, 255, 0.08);
+  --sask-trivia-border: rgba(255, 255, 255, 0.14);
+  --sask-trivia-text: #f8fafc;
+  --sask-trivia-muted: #b7c6bf;
+  --sask-trivia-green: #16a34a;
+  --sask-trivia-red: #dc2626;
+  --sask-trivia-gold: #facc15;
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 28px;
+  color: var(--sask-trivia-text);
+  background:
+    radial-gradient(circle at top left, rgba(22, 163, 74, 0.32), transparent 32%),
+    linear-gradient(135deg, var(--sask-trivia-bg), #030b08);
+  border: 1px solid var(--sask-trivia-border);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.sask-trivia *,
+.sask-trivia *::before,
+.sask-trivia *::after {
+  box-sizing: inherit;
+}
+
+.sask-trivia__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--sask-trivia-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sask-trivia__title {
+  margin: 0 0 10px;
+  color: var(--sask-trivia-text);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1;
+}
+
+.sask-trivia__intro {
+  margin: 0 0 24px;
+  color: var(--sask-trivia-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.sask-trivia__panel {
+  padding: 22px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--sask-trivia-border);
+  border-radius: 18px;
+}
+
+.sask-trivia__meta {
+  margin-bottom: 10px;
+  color: var(--sask-trivia-muted);
+  font-size: 0.9rem;
+}
+
+.sask-trivia__question {
+  margin: 0 0 18px;
+  color: var(--sask-trivia-text);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.sask-trivia__options {
+  display: grid;
+  gap: 12px;
+}
+
+.sask-trivia__option {
+  width: 100%;
+  padding: 16px 18px;
+  color: var(--sask-trivia-text);
+  text-align: left;
+  background: var(--sask-trivia-card-soft);
+  border: 1px solid var(--sask-trivia-border);
+  border-radius: 14px;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.sask-trivia__option:hover:not(:disabled),
+.sask-trivia__option:focus-visible:not(:disabled) {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(250, 204, 21, 0.7);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.sask-trivia__option:disabled {
+  cursor: default;
+  opacity: 0.82;
+}
+
+.sask-trivia__option.is-correct {
+  background: rgba(22, 163, 74, 0.25);
+  border-color: rgba(34, 197, 94, 0.9);
+}
+
+.sask-trivia__option.is-incorrect {
+  background: rgba(220, 38, 38, 0.24);
+  border-color: rgba(248, 113, 113, 0.9);
+}
+
+.sask-trivia__result {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.sask-trivia__result.is-visible {
+  display: block;
+}
+
+.sask-trivia__result.is-correct {
+  color: #dcfce7;
+  background: rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+}
+
+.sask-trivia__result.is-incorrect {
+  color: #fee2e2;
+  background: rgba(220, 38, 38, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+}
+
+.sask-trivia__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sask-trivia__stat {
+  padding: 14px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+}
+
+.sask-trivia__stat-value {
+  color: var(--sask-trivia-text);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.sask-trivia__stat-label {
+  margin-top: 4px;
+  color: var(--sask-trivia-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sask-trivia__loading,
+.sask-trivia__error {
+  padding: 28px;
+  color: var(--sask-trivia-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .sask-trivia {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .sask-trivia__panel {
+    padding: 18px;
+  }
+
+  .sask-trivia__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

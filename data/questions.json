@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the capital city of Saskatchewan?",
+    "options": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the largest city in Saskatchewan?",
+    "options": ["Regina", "Prince Albert", "Saskatoon", "Yorkton"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "In what year did Saskatchewan become a province?",
+    "options": ["1867", "1905", "1912", "1898"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is Saskatchewan's provincial flower?",
+    "options": ["Prairie Rose", "Western Red Lily", "Sunflower", "Wild Violet"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is Saskatchewan's provincial bird?",
+    "options": ["Meadowlark", "Sharp-tailed Grouse", "Eagle", "Blue Jay"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is Saskatchewan's provincial tree?",
+    "options": ["Maple", "Spruce", "Paper Birch", "Pine"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which crop is Saskatchewan famous for producing?",
+    "options": ["Corn", "Rice", "Canola", "Cotton"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which natural resource is Saskatchewan a global leader in?",
+    "options": ["Gold", "Potash", "Coal", "Iron"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which city is home to the University of Saskatchewan?",
+    "options": ["Regina", "Saskatoon", "Moose Jaw", "Swift Current"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which city is home to the University of Regina?",
+    "options": ["Prince Albert", "Regina", "Yorkton", "Estevan"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What does the name 'Saskatchewan' mean?",
+    "options": ["Land of lakes", "Swift flowing river", "Open plains", "Northern land"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "The name Saskatchewan comes from which language?",
+    "options": ["French", "Cree", "Ojibwe", "English"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the approximate population of Saskatchewan?",
+    "options": ["500,000", "800,000", "1.2 million", "2 million"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the name of Saskatchewan's CFL team?",
+    "options": ["Roughriders", "Stampeders", "Blue Bombers", "Eskimos"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "What colour are the Saskatchewan Roughriders known for?",
+    "options": ["Blue", "Red", "Green", "Black"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which national park is in Saskatchewan?",
+    "options": ["Banff", "Prince Albert National Park", "Jasper", "Yoho"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which city is known as the 'City of Bridges'?",
+    "options": ["Regina", "Saskatoon", "Moose Jaw", "Yorkton"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is Saskatchewan's motto?",
+    "options": ["Unity and Strength", "From many peoples, strength", "Land of opportunity", "Prairie pride"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What type of climate does Saskatchewan have?",
+    "options": ["Tropical", "Oceanic", "Continental", "Mediterranean"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which province borders Saskatchewan to the west?",
+    "options": ["Manitoba", "Alberta", "British Columbia", "Ontario"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which province borders Saskatchewan to the east?",
+    "options": ["Ontario", "Manitoba", "Quebec", "Alberta"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which territory borders Saskatchewan to the north?",
+    "options": ["Yukon", "Nunavut", "Northwest Territories", "None"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which US state borders Saskatchewan?",
+    "options": ["Idaho", "Montana", "Minnesota", "Wyoming"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is Saskatchewan's time zone year-round?",
+    "options": ["Eastern", "Mountain", "Central Standard Time", "Pacific"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What resource is mined for nuclear energy in Saskatchewan?",
+    "options": ["Coal", "Uranium", "Gold", "Silver"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which city hosts Mosaic Stadium?",
+    "options": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is SGI?",
+    "options": ["Bank", "Insurance provider", "University", "Energy company"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is SaskPower?",
+    "options": ["Gas company", "Electric utility", "Water authority", "Telecom"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which region covers southern Saskatchewan?",
+    "options": ["Mountains", "Prairies", "Forest", "Tundra"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which lake is in Saskatchewan?",
+    "options": ["Lake Ontario", "Lake Diefenbaker", "Lake Erie", "Lake Superior"],
+    "correctAnswer": 1
+  }
+]
